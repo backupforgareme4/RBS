@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "CSM2";
+}
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/app.js"></script>
+
+<div class="container">
+    <div class="jumbotron">
+        CSM2 - Please Click on a room below to check availability
+    </div>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <img runat="server" src="~/CSM2.jpg" width="1050" height="716" usemap="#rooms2" />
+
+        <map name="rooms2">
+
+            <area ng-repeat="(a,b) in values" shape="rect" coords={{a}} href="http://www.w3schools.com/angular/angular_directives.asp" alt="{{b}}" />
+
+        </map>
+    </div>
+
+    @Html.ActionLink("link text", "Calendar", "Bookings")
+
+</div>

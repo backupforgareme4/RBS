@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Scripts {
+    <script>
+        $(function () {
+            var showModal = function () {
+                $("#theModal").modal("show");
+            };
+            $("#showModal").click(showModal);
+        });
+    </script>
+}
+
+
+<div  id="theModal" class="modal fade">
+    <div class = "modal-dialog">
+        <div class = "modal-content">
+            <div class = "modal-header">
+                <h1 class = "modal-title text-danger">Attention!</h1>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger">When booking rooms in CSM1, please ensure all attendees have security clearance. No persons can be admitted into CSM01 without security clearance</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn-default" data-dismiss="modal" aria-hidden="true">
+                    Close
+                </button>
+
+                <input type="button" value="Continue" onclick="location.href='@Url.Action("CSM1", "Home")'" >
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--script src="~/Scripts/angular.min.js"></script>-->
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+
+                <button id="showModal" class="a btn" align="center" type="submit" onclick="location.href='@Url.Action("CSM1", "Home")'">CSM1</button>
+
+            </div>
+            <div class="col-offset-8">
+
+                <input type="button" class="b btn" value="CSM2" onclick="location.href='@Url.Action("CSM2", "Home")'">
+
+            </div>
+        </div>
+    </div>
+</div>

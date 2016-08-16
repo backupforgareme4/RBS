@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src=""></script>
+
+<calendar selected="day"></calendar>
+
+<!-- might want to put this in separte HTML file-->
+
+<div class="header">
+        <i previous month button></i>
+        <span>month/year</span>
+        <i next month button"></i>
+</div>
+<div class="week names">
+    <span class="day">Sun</span>
+    <span class="day">Mon</span>
+    <span class="day">Tue</span>
+    <span class="day">Wed</span>
+    <span class="day">Thu</span>
+    <span class="day">Fri</span>
+    <span class="day">Sat</span>
+</div>
+<div class="week" ng-repeat="week in weeks">
+    <span>date</span>
+</div>
